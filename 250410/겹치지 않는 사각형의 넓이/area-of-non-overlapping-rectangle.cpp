@@ -1,13 +1,14 @@
 #include <iostream>
 
 #define OFFSET 1000
+#define SIZE 2001
 
 using namespace std;
 
 int x1[3], y1[3];
 int x2[3], y2[3];
 
-int a[4000000] = {};
+int a[SIZE * SIZE] = {};
 
 
 int main() 
@@ -29,7 +30,7 @@ int main()
     {
         for (int j = y1[0] + OFFSET; j < y2[0] + OFFSET; j++)
         {
-            a[i *OFFSET + j] = 1;
+            a[i *SIZE + j] = 1;
         }
     }
 
@@ -37,7 +38,7 @@ int main()
     {
         for (int j = y1[1] + OFFSET; j < y2[1] + OFFSET; j++)
         {
-            a[i *OFFSET + j] = 1;
+            a[i *SIZE + j] = 1;
         }
     }
 
@@ -45,7 +46,7 @@ int main()
     {
         for (int j = y1[2] + OFFSET; j < y2[2] + OFFSET; j++)
         {
-            a[i *OFFSET + j] = 2;
+            a[i *SIZE + j] = 2;
         }
     }
 
@@ -53,11 +54,10 @@ int main()
     {
         for (int k = minY + OFFSET; k < maxY + OFFSET; k++)
         {
-            if (a[j *OFFSET + k] != 1)
+            if (a[j *SIZE + k] != 1)
                 continue;
 
             count++;
-            a[j *OFFSET + k] = 1;
             
         }
     }

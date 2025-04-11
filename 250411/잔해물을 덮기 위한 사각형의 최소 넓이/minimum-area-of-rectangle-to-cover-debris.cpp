@@ -55,7 +55,8 @@ int main()
         }
     }
 
-    cout << (rowMaxCount+1 - rowMinCount) * (colMaxCount+1 - colMinCount);
+    if (rowMinCount != SIZE)
+        cout << (rowMaxCount+1 - rowMinCount) * (colMaxCount+1 - colMinCount);
 
     //cout << rowMaxCount << rowMinCount;
     

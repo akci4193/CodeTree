@@ -25,6 +25,8 @@ int main()
 
     }
 
+    maxCount = max(maxCount, count);
+
     cout << maxCount;
 
     // Please write your code here.

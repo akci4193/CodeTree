@@ -54,14 +54,14 @@ int main()
     //cout << aCount[5] << bCount[5];
     for (int i = 0; i < SIZE; i++)
     {
+        if (i == index)
+            break;
         if (aCount[i] == bCount[i])
         {
-            //cout << aCount[i] << bCount[i];
             cout << i+1;
             return 0;
         }
-        else if (d[i] && d2[i] == '\0')
-            break;
+        
         
     } 
 

@@ -51,7 +51,7 @@ int main()
         }
     }
 
-    for (int i = 0; i < SIZE; i++)
+    for (int i = 0; i < SIZE * 1000; i++)
     {
         if (i == index)
             break;

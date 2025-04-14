@@ -15,7 +15,7 @@ int main()
     {
         cin >> arr[i];
 
-        if(arr[i] <= t && (i == 0 || arr[i] <= arr[i - 1]))
+        if(arr[i] <= t || (i == 0))
         {
             maxCount = max(maxCount, count);
             count = 0;

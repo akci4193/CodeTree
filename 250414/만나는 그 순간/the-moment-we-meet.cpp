@@ -13,8 +13,8 @@ int main()
 {
     cin >> n >> m;
 
-    int aCount[SIZE] = {};
-    int bCount[SIZE] = {};
+    int aCount[SIZE * n] = {};
+    int bCount[SIZE * m] = {};
 
     int index = 0;
     for (int i = 0; i < n; i++)
@@ -51,7 +51,6 @@ int main()
         }
     }
 
-    //cout << aCount[5] << bCount[5];
     for (int i = 0; i < SIZE; i++)
     {
         if (i == index)

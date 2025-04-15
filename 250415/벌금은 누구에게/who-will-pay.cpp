@@ -24,6 +24,8 @@ int main()
 
     }
 
+    cout << -1;
+
     // Please write your code here.
 
     return 0;

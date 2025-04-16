@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define SIZE 50000
+#define SIZE 1000000
 using namespace std;
 
 int n, m;

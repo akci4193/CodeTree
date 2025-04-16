@@ -61,7 +61,7 @@ int main()
             break;
 
         int a = (i < index) ? aCount[i] : aCount[index-1];
-        int b = (i < index2) ? bCount[i] : bCount[index-1];
+        int b = (i < index2) ? bCount[i] : bCount[index2-1];
         //cout << a << " " << b << endl;
         if (a == b)
         {

@@ -35,7 +35,7 @@ int main()
             ny += dy[dirNum];
 
 
-            if (i !=0 && nx == 0 && ny == 0)
+            if (nx == 0 && ny == 0)
             {
                 cout << count;
                 return 0;

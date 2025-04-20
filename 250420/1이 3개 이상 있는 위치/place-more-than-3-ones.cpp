@@ -29,25 +29,22 @@ int main()
             int count = 0;
             for (int k = 0; k < 4; k++)
             {
-                
                 int nx = i + dx[k];
                 int ny = j + dy[k];    
 
-                if (0 <= nx && nx < 5 && 0 <= ny && ny < 5)
+                if (0 <= nx && nx < n && 0 <= ny && ny < n)
                 {
                     //cout << nx << ' ' << ny << endl;
                     if (grid[nx][ny] == 1)
                         count++;
                     
-                    if (count >= 3)
+                    if (count == 3)
                     {
                         result++;
                         break;
                     }
                         
                 }
-
-                
             }
         }
     }

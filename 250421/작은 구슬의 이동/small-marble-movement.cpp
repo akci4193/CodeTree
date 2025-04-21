@@ -13,9 +13,8 @@ int main()
 
     // Please write your code here.
 
-    int matrix[n * n] = {};
     int dx[4] = {1, 0, -1, 0}, dy[4] = {0, -1, 0, 1};
-    int x = r-1, y = c-1;
+    int x = c-1, y = r-1;
 
     int dirNum = -1; 
     if (d == 'R')
@@ -29,21 +28,22 @@ int main()
 
     for (int j = 0; j < t; j++) 
     {
-
+        //cout << x << ' ' << y << endl;
         int nx = x + dx[dirNum];
         int ny = y + dy[dirNum];
 
         if (nx < 0 || nx >= n || ny < 0 || ny >= n) 
         {
             dirNum = (dirNum + 2) % 4;
-        } else 
+        }
+        else 
         {
             x = nx;
             y = ny;
         }
     }
 
-    cout << y << ' ' << x;
+    cout << y+1 << ' ' << x+1;
 
     return 0;
 }

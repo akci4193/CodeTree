@@ -13,8 +13,8 @@ int main()
 
     // Please write your code here.
 
-    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, -1, 0, 1};
-    int x = c-1, y = r-1;
+    int dx[4] = {0, 1, 0, -1}; int dy[4] = {1, 0, -1, 0};
+    int x = r-1, y = c-1;
 
     int dirNum = -1; 
     if (d == 'R')
@@ -28,7 +28,6 @@ int main()
 
     for (int j = 0; j < t; j++) 
     {
-        //cout << x << ' ' << y << endl;
         int nx = x + dx[dirNum];
         int ny = y + dy[dirNum];
 
@@ -43,7 +42,7 @@ int main()
         }
     }
 
-    cout << y+1 << ' ' << x+1;
+    cout << x+1 << ' ' << y+1;
 
     return 0;
 }

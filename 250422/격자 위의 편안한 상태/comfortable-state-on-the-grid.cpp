@@ -16,7 +16,8 @@ int main()
     for (int i = 0; i < M; i++) 
     {
         cin >> r[i] >> c[i];
-        matrix[c[i] + r[i] * c[i]]++;
+        r[i]--; c[i]--;
+        matrix[c[i] + r[i] * N]++;
         
         if (i > 2)
         {
@@ -27,7 +28,7 @@ int main()
                 int ny = c[i] + dy[j];
 
                 if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
-                else if (matrix[ny + nx * ny] != 0)
+                else if (matrix[ny + nx * N] != 0)
                 {
                     count++;
                 }

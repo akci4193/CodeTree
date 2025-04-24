@@ -20,7 +20,11 @@ int main()
     {
         for (int j = 0; j < m; j++) 
         {
-            matrix[x][y] = count++;
+            if (count <= 'Z')
+                matrix[x][y] = count++;
+            else
+                count = 0;
+
 
             int nx = x + dx[dirNum];
             int ny = y + dy[dirNum];

@@ -20,10 +20,9 @@ int main()
     {
         for (int j = 0; j < m; j++) 
         {
-            if (count <= 'Z')
-                matrix[x][y] = count++;
-            else
-                count = 0;
+            if (count +'A' -1 > 'Z')
+                count = 1;
+            matrix[x][y] = count++;
 
 
             int nx = x + dx[dirNum];
@@ -47,7 +46,7 @@ int main()
     {
         for (int j = 0; j < m; j++) 
         {
-            cout << (char)(matrix[i][j] +'A' - 1)<< ' ';
+            cout << (char)(matrix[i][j] +'A' -1)<< ' ';
         }
         cout << endl;
     }

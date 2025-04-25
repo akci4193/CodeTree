@@ -4,7 +4,8 @@ using namespace std;
 
 int n, m;
 
-int main() {
+int main() 
+{
     cin >> n >> m;
 
     // Please write your code here.
@@ -16,19 +17,17 @@ int main() {
     int matrix[n][m] = {};
 
     int count = 1;
-    int dirNum = 2; 
+    int dirNum = 3; 
     
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++) 
         {
-            if (count +'A' -1 > 'Z')
-                count = 1;
             matrix[x][y] = count++;
-
             int nx = x + dx[dirNum];
             int ny = y + dy[dirNum];
 
+            //cout << nx << ' ' << ny << ' ' << n << ' ' << m << ' ' << endl;
             if (nx < 0 || nx >= n || ny < 0 || ny >= m || matrix[nx][ny] != 0) 
             {
                 dirNum = (dirNum + 1) % 4;
@@ -38,6 +37,8 @@ int main() {
 
             x = nx;
             y = ny;
+
+            //cout << x << ' ' << y << ' ' << endl;
 
         }
 

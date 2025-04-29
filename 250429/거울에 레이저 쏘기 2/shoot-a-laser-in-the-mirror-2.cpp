@@ -23,7 +23,7 @@ int main()
         {
             cin >> grid[i][j];
             
-            a.push_back({{x,y}, dirNum+1});
+            a.push_back({{x,y}, (dirNum + 1) % 4});
             int nx = x + dx[dirNum];
             int ny = y + dy[dirNum];
 
@@ -31,7 +31,7 @@ int main()
             if (nx < 0 || nx >= n || ny < 0 || ny >= n) // 회전
             {
                 dirNum = (dirNum + 1) % 4;
-                a.push_back({{x,y}, dirNum+1});
+                a.push_back({{x,y}, (dirNum + 1) % 4});
                 nx = x + dx[dirNum];
                 ny = y + dy[dirNum];
             }

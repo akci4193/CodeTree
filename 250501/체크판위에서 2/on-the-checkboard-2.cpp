@@ -22,20 +22,20 @@ int main()
     {
         for(int j = 0; j < C - 3; j++)
         {
-            if (i == 0)
-            {
-                if (grid[i][j] == 'W')
-                    color = 'W';
-                else
-                    color = 'B';
-            }
-
             for (int k = i+1; k < R-2; k++)
             {
                 for (int l = j+1; l < C-2; l++)
                 {
+                    if (i == 0)
+                    {
+                        if (grid[i][j] == 'W')
+                            color = 'W';
+                        else
+                            color = 'B';
+                    }
                     if (grid[k][l] != color)
                     {
+                        //cout << color << ' ' << k << ' ' << l << endl;
                         for (int o = k+1; o < R-1; o++)
                         {
                             for (int p = l+1; p < C-1; p++)
@@ -43,7 +43,7 @@ int main()
                                 color = grid[k][l];
                                 if (grid[o][p] != color)
                                 {
-                                    //cout << ' ' << o << ' ' << p << endl;
+                                    //cout << color << ' ' << o << ' ' << p << endl;
                                     for (int x = o+1; x < R; x++)
                                     {
                                         for (int y = p+1; y < C; y++)
@@ -51,8 +51,12 @@ int main()
                                             color = grid[o][p];
                                             if (grid[x][y] != color)
                                             {
+                                                
                                                 if (x == R-1 && y == C-1)
+                                                {
                                                     count++;
+                                                    //cout << color << ' ' << o << ' ' << p << endl;
+                                                }
                                             }
                                         }
                                     }

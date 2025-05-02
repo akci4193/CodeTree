@@ -19,7 +19,7 @@ int main()
 
     for(int i = 0; i < 1; i++)
     {
-        for(int j = 0; j < C - 4; j++)
+        for(int j = 0; j < C - (C-1); j++)
         {
             char color1 = grid[0][j]; 
             if (color1 == grid[R-1][C-1]) continue;

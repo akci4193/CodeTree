@@ -18,7 +18,7 @@ int main()
     {
         for(int j = 0; j < N-2; j++)
         {
-            if (grid < arr[i][j] + arr[i][j+1] + arr[i][j+2])
+            if (grid <= arr[i][j] + arr[i][j+1] + arr[i][j+2])
             {
                 grid = arr[i][j] + arr[i][j+1] + arr[i][j+2];
                 x = i;
@@ -38,7 +38,7 @@ int main()
         for(int j = 0; j < N-2; j++)
         {
             if (arr[i][j] == -1 || arr[i][j+1] == -1 || arr[i][j+2] == -1) continue;
-            if (grid2 < arr[i][j] + arr[i][j+1] + arr[i][j+2])
+            if (grid2 <= arr[i][j] + arr[i][j+1] + arr[i][j+2])
             {
                 grid2 = arr[i][j] + arr[i][j+1] + arr[i][j+2];
             }

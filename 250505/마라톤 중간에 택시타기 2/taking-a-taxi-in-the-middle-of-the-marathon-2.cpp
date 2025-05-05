@@ -16,13 +16,11 @@ int main()
 
     int minDistance = 1e9;
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i+1; j < n -1; j++)
+    for (int j = 1; j < n -1; j++)
         {
             int distance = 0;
-            int x2 = 0;
-            int y2 = 0;
+            int x2 = x[0];
+            int y2 = y[0];
             for(int k = 0; k < n; k++)
             {
                 if (k == j) continue;
@@ -32,7 +30,6 @@ int main()
 
             minDistance = min(distance , minDistance);
         }
-    }
 
     cout << minDistance;
 

@@ -16,7 +16,7 @@ int main()
     {
         for (int j = 0; j < 19; j++) // 가로
         {
-            if (i + j > 14) break;
+            if (i + j > 18) break;
             if (value != board[i][j])
             {
                 value = board[i][j];
@@ -43,7 +43,7 @@ int main()
 
         for (int j = 0; j < 19; j++) // 세로
         {
-            if (i + j > 14) break;
+            if (i + j > 18) break;
             if (value != board[j][i])
             {
                 value = board[j][i];
@@ -69,7 +69,7 @@ int main()
 
         for (int j = 0; j < 19; j++) // 왼쪽->오른쪽 대각 1
         {
-            if (i + j > 14) break;
+            if (i + j > 18) break;
             if (value != board[i+j][j])
             {
                 value = board[i+j][j];
@@ -94,7 +94,7 @@ int main()
         value = 0;
         for (int j = 1; j < 19; j++) // 왼쪽->오른쪽 대각 2
         {
-            if (i + j > 14) break;
+            if (i + j > 18) break;
             if (value != board[j][i+j])
             {
                 value = board[j][i+j];
@@ -121,7 +121,7 @@ int main()
     {
         for (int j = 0; j < 19; j++) // 오른쪽 -> 왼쪽 대각 1
         {
-            if (i - j < 5) break;
+            if (i - j < 0) break;
             if (value != board[i-j][j])
             {
                 value = board[i-j][j];
@@ -145,7 +145,7 @@ int main()
         value = 0;
         for (int j = 1; j < 19; j++) // 오른쪽 -> 왼쪽 대각 2
         {
-            if (i - j < 5) break;
+            if (i - j < 0) break;
             if (value != board[j][j + 18 - i])
             {
                 value = board[j][j + 18 - i];

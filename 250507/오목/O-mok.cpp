@@ -16,7 +16,6 @@ int main()
     {
         for (int j = 0; j < 19; j++) // 가로
         {
-            if (i + j > 18) break;
             if (value != board[i][j])
             {
                 value = board[i][j];
@@ -43,7 +42,6 @@ int main()
 
         for (int j = 0; j < 19; j++) // 세로
         {
-            if (i + j > 18) break;
             if (value != board[j][i])
             {
                 value = board[j][i];

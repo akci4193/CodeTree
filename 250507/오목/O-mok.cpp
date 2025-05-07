@@ -167,6 +167,7 @@ int main()
         }
     }
 
+    cout << 0;
     // Please write your code here.
 
     return 0;

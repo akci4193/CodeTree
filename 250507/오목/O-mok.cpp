@@ -55,7 +55,7 @@ int main()
                 continue;
             count++;
             if (count == 3)
-                x = i, y = j;
+                x = j, y = i;
             else if (count == 5)
             {
                 cout << value << endl;
@@ -81,7 +81,7 @@ int main()
                 continue;
             count++;
             if (count == 3)
-                x = i, y = j;
+                x = i+j, y = j;
             else if (count == 5)
             {
                 cout << value << endl;
@@ -106,7 +106,7 @@ int main()
                 continue;
             count++;
             if (count == 3)
-                x = i, y = j;
+                x = j, y = i+j;
             else if (count == 5)
             {
                 cout << value << endl;
@@ -133,7 +133,7 @@ int main()
                 continue;
             count++;
             if (count == 3)
-                x = i, y = j;
+                x = i-j, y = j;
             else if (count == 5)
             {
                 cout << value << endl;
@@ -157,7 +157,7 @@ int main()
                 continue;
             count++;
             if (count == 3)
-                x = i, y = j;
+                x = i, y = j + 18 - i;
             else if (count == 5)
             {
                 cout << value << endl;

@@ -12,8 +12,6 @@ int main()
 
     int placed[10001] = {};
 
-    int R = 0;
-
     for (int i = 0; i < N; i++) 
     {
         cin >> x[i] >> c[i];
@@ -26,11 +24,10 @@ int main()
         else
             placed[x[i]] = 2;
 
-        R = max(x[i], R);
     }
     
     int max_cnt = 0;
-    for(int i = 1; i <= R - K + 1; i++) 
+    for(int i = 1; i <= 10000 - K + 1; i++) 
     {
         int num = 0;
         for(int j = i; j <= i + K; j++)

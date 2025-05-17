@@ -10,7 +10,7 @@ int main()
 {
     cin >> N >> K;
 
-    int placed[10001];
+    int placed[10001] = {};
 
     int R = 0;
 

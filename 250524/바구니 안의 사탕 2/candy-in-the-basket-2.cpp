@@ -20,14 +20,14 @@ int main()
 
     for(int i = 0; i < N; i++)
     {
-        placed[pos[i]] = candy[i];
+        placed[pos[i]] += candy[i];
     }
     
     int max_cnt = 0;
-    for(int i = 0; i <= maxPos - 2 * K; i++) 
+    for(int i = 0; i <= maxPos; i++) 
     {
         int num = 0;
-        for(int j = i; j <= i + K * 2; j++)
+        for(int j = i; j <= i + K * 2 && j <= maxPos; j++)
         {
             if (placed[j] == 0) continue;
             num += placed[j];

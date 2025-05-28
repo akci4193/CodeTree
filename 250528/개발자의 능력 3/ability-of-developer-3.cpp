@@ -22,7 +22,7 @@ int main()
         cin >> abilities[i];
     }
 
-    int min_diff = 100;
+    int min_diff = 1000000;
     for(int i = 0; i < 6; i++)
         for(int j = i + 1; j < 6; j++)
             for (int k = j + 1; k < 6; k++)

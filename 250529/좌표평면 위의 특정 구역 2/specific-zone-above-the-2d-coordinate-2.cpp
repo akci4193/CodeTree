@@ -9,7 +9,7 @@ int main()
 {
     cin >> N;
 
-    int minCount = 1e9;
+    int minCount = 2e9;
     for (int i = 0; i < N; i++) 
     {
         cin >> x[i] >> y[i];
